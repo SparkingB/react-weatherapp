@@ -1,0 +1,589 @@
+{
+  "success": "true",
+  "result": {
+    "resource_id": "F-D0047-091",
+    "fields": [
+      {
+        "id": "dataid",
+        "type": "String"
+      },
+      {
+        "id": "geocode",
+        "type": "String"
+      },
+      {
+        "id": "locationsName",
+        "type": "String"
+      },
+      {
+        "id": "locationName",
+        "type": "String"
+      },
+      {
+        "id": "lat",
+        "type": "Float"
+      },
+      {
+        "id": "lon",
+        "type": "Float"
+      },
+      {
+        "id": "datasetDescription",
+        "type": "String"
+      },
+      {
+        "id": "datasetLanguage",
+        "type": "String"
+      },
+      {
+        "id": "elementName",
+        "type": "String"
+      },
+      {
+        "id": "elementValue",
+        "type": "String"
+      },
+      {
+        "id": "elementMeasure",
+        "type": "String"
+      },
+      {
+        "id": "parameterName",
+        "type": "String"
+      },
+      {
+        "id": "parameterValue",
+        "type": "String"
+      },
+      {
+        "id": "parameterUnit",
+        "type": "String"
+      },
+      {
+        "id": "startTime",
+        "type": "Timestamp"
+      },
+      {
+        "id": "endTime",
+        "type": "Timestamp"
+      },
+      {
+        "id": "dataTime",
+        "type": "Timestamp"
+      }
+    ]
+  },
+  "records": {
+    "contentDescription": "臺灣各鄉鎮市區未來2天(逐3小時)及未來1週天氣預報",
+    "locations": [
+      {
+        "datasetDescription": "臺灣各縣市未來1週天氣預報",
+        "dataid": "D0047-091",
+        "location": [
+          {
+            "locationName": "臺北市",
+            "geocode": "63",
+            "lat": "25.0351",
+            "lon": "121.559",
+            "weatherElement": [
+              {
+                "elementName": "PoP",
+                "elementMeasure": "%",
+                "time": [
+                  {
+                    "startTime": "2017-06-15 18:00:00",
+                    "endTime": "2017-06-16 06:00:00",
+                    "elementValue": "90"
+                  },
+                  {
+                    "startTime": "2017-06-16 06:00:00",
+                    "endTime": "2017-06-16 18:00:00",
+                    "elementValue": "90"
+                  },
+                  {
+                    "startTime": "2017-06-16 18:00:00",
+                    "endTime": "2017-06-17 06:00:00",
+                    "elementValue": "90"
+                  },
+                  {
+                    "startTime": "2017-06-17 06:00:00",
+                    "endTime": "2017-06-17 18:00:00",
+                    "elementValue": "100"
+                  },
+                  {
+                    "startTime": "2017-06-17 18:00:00",
+                    "endTime": "2017-06-18 06:00:00",
+                    "elementValue": "100"
+                  },
+                  {
+                    "startTime": "2017-06-18 06:00:00",
+                    "endTime": "2017-06-18 18:00:00",
+                    "elementValue": "100"
+                  },
+                  {
+                    "startTime": "2017-06-18 18:00:00",
+                    "endTime": "2017-06-19 06:00:00",
+                    "elementValue": ""
+                  },
+                  {
+                    "startTime": "2017-06-19 06:00:00",
+                    "endTime": "2017-06-19 18:00:00",
+                    "elementValue": ""
+                  },
+                  {
+                    "startTime": "2017-06-19 18:00:00",
+                    "endTime": "2017-06-20 06:00:00",
+                    "elementValue": ""
+                  },
+                  {
+                    "startTime": "2017-06-20 06:00:00",
+                    "endTime": "2017-06-20 18:00:00",
+                    "elementValue": ""
+                  },
+                  {
+                    "startTime": "2017-06-20 18:00:00",
+                    "endTime": "2017-06-21 06:00:00",
+                    "elementValue": ""
+                  },
+                  {
+                    "startTime": "2017-06-21 06:00:00",
+                    "endTime": "2017-06-21 18:00:00",
+                    "elementValue": ""
+                  },
+                  {
+                    "startTime": "2017-06-21 18:00:00",
+                    "endTime": "2017-06-22 06:00:00",
+                    "elementValue": ""
+                  },
+                  {
+                    "startTime": "2017-06-22 06:00:00",
+                    "endTime": "2017-06-22 18:00:00",
+                    "elementValue": ""
+                  },
+                  {
+                    "startTime": "2017-06-22 18:00:00",
+                    "endTime": "2017-06-23 06:00:00",
+                    "elementValue": ""
+                  }
+                ]
+              },
+              {
+                "elementName": "T",
+                "elementMeasure": "C",
+                "time": [
+                  {
+                    "startTime": "2017-06-15 18:00:00",
+                    "endTime": "2017-06-16 06:00:00",
+                    "elementValue": "23"
+                  },
+                  {
+                    "startTime": "2017-06-16 06:00:00",
+                    "endTime": "2017-06-16 18:00:00",
+                    "elementValue": "24"
+                  },
+                  {
+                    "startTime": "2017-06-16 18:00:00",
+                    "endTime": "2017-06-17 06:00:00",
+                    "elementValue": "24"
+                  },
+                  {
+                    "startTime": "2017-06-17 06:00:00",
+                    "endTime": "2017-06-17 18:00:00",
+                    "elementValue": "24"
+                  },
+                  {
+                    "startTime": "2017-06-17 18:00:00",
+                    "endTime": "2017-06-18 06:00:00",
+                    "elementValue": "24"
+                  },
+                  {
+                    "startTime": "2017-06-18 06:00:00",
+                    "endTime": "2017-06-18 18:00:00",
+                    "elementValue": "26"
+                  },
+                  {
+                    "startTime": "2017-06-18 18:00:00",
+                    "endTime": "2017-06-19 06:00:00",
+                    "elementValue": "25"
+                  },
+                  {
+                    "startTime": "2017-06-19 06:00:00",
+                    "endTime": "2017-06-19 18:00:00",
+                    "elementValue": "28"
+                  },
+                  {
+                    "startTime": "2017-06-19 18:00:00",
+                    "endTime": "2017-06-20 06:00:00",
+                    "elementValue": "26"
+                  },
+                  {
+                    "startTime": "2017-06-20 06:00:00",
+                    "endTime": "2017-06-20 18:00:00",
+                    "elementValue": "28"
+                  },
+                  {
+                    "startTime": "2017-06-20 18:00:00",
+                    "endTime": "2017-06-21 06:00:00",
+                    "elementValue": "26"
+                  },
+                  {
+                    "startTime": "2017-06-21 06:00:00",
+                    "endTime": "2017-06-21 18:00:00",
+                    "elementValue": "27"
+                  },
+                  {
+                    "startTime": "2017-06-21 18:00:00",
+                    "endTime": "2017-06-22 06:00:00",
+                    "elementValue": "26"
+                  },
+                  {
+                    "startTime": "2017-06-22 06:00:00",
+                    "endTime": "2017-06-22 18:00:00",
+                    "elementValue": "29"
+                  },
+                  {
+                    "startTime": "2017-06-22 18:00:00",
+                    "endTime": "2017-06-23 06:00:00",
+                    "elementValue": "26"
+                  }
+                ]
+              },
+              {
+                "elementName": "Wx",
+                "time": [
+                  {
+                    "startTime": "2017-06-15 18:00:00",
+                    "endTime": "2017-06-16 06:00:00",
+                    "elementValue": "陰陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "31"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-16 06:00:00",
+                    "endTime": "2017-06-16 18:00:00",
+                    "elementValue": "陰陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "31"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-16 18:00:00",
+                    "endTime": "2017-06-17 06:00:00",
+                    "elementValue": "陰陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "31"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-17 06:00:00",
+                    "endTime": "2017-06-17 18:00:00",
+                    "elementValue": "陰陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "31"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-17 18:00:00",
+                    "endTime": "2017-06-18 06:00:00",
+                    "elementValue": "陰陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "31"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-18 06:00:00",
+                    "endTime": "2017-06-18 18:00:00",
+                    "elementValue": "陰陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "31"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-18 18:00:00",
+                    "endTime": "2017-06-19 06:00:00",
+                    "elementValue": "陰陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "31"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-19 06:00:00",
+                    "endTime": "2017-06-19 18:00:00",
+                    "elementValue": "陰陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "31"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-19 18:00:00",
+                    "endTime": "2017-06-20 06:00:00",
+                    "elementValue": "陰陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "31"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-20 06:00:00",
+                    "endTime": "2017-06-20 18:00:00",
+                    "elementValue": "陰陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "31"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-20 18:00:00",
+                    "endTime": "2017-06-21 06:00:00",
+                    "elementValue": "陰陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "31"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-21 06:00:00",
+                    "endTime": "2017-06-21 18:00:00",
+                    "elementValue": "陰陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "31"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-21 18:00:00",
+                    "endTime": "2017-06-22 06:00:00",
+                    "elementValue": "陰陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "31"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-22 06:00:00",
+                    "endTime": "2017-06-22 18:00:00",
+                    "elementValue": "多雲短暫陣雨或雷雨",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "17"
+                      }
+                    ]
+                  },
+                  {
+                    "startTime": "2017-06-22 18:00:00",
+                    "endTime": "2017-06-23 06:00:00",
+                    "elementValue": "陰時多雲",
+                    "parameter": [
+                      {
+                        "parameterName": "天氣圖示代碼",
+                        "parameterValue": "06"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elementName": "MinT",
+                "elementMeasure": "C",
+                "time": [
+                  {
+                    "startTime": "2017-06-15 18:00:00",
+                    "endTime": "2017-06-16 06:00:00",
+                    "elementValue": "23"
+                  },
+                  {
+                    "startTime": "2017-06-16 06:00:00",
+                    "endTime": "2017-06-16 18:00:00",
+                    "elementValue": "23"
+                  },
+                  {
+                    "startTime": "2017-06-16 18:00:00",
+                    "endTime": "2017-06-17 06:00:00",
+                    "elementValue": "23"
+                  },
+                  {
+                    "startTime": "2017-06-17 06:00:00",
+                    "endTime": "2017-06-17 18:00:00",
+                    "elementValue": "23"
+                  },
+                  {
+                    "startTime": "2017-06-17 18:00:00",
+                    "endTime": "2017-06-18 06:00:00",
+                    "elementValue": "24"
+                  },
+                  {
+                    "startTime": "2017-06-18 06:00:00",
+                    "endTime": "2017-06-18 18:00:00",
+                    "elementValue": "24"
+                  },
+                  {
+                    "startTime": "2017-06-18 18:00:00",
+                    "endTime": "2017-06-19 06:00:00",
+                    "elementValue": "25"
+                  },
+                  {
+                    "startTime": "2017-06-19 06:00:00",
+                    "endTime": "2017-06-19 18:00:00",
+                    "elementValue": "25"
+                  },
+                  {
+                    "startTime": "2017-06-19 18:00:00",
+                    "endTime": "2017-06-20 06:00:00",
+                    "elementValue": "25"
+                  },
+                  {
+                    "startTime": "2017-06-20 06:00:00",
+                    "endTime": "2017-06-20 18:00:00",
+                    "elementValue": "25"
+                  },
+                  {
+                    "startTime": "2017-06-20 18:00:00",
+                    "endTime": "2017-06-21 06:00:00",
+                    "elementValue": "25"
+                  },
+                  {
+                    "startTime": "2017-06-21 06:00:00",
+                    "endTime": "2017-06-21 18:00:00",
+                    "elementValue": "25"
+                  },
+                  {
+                    "startTime": "2017-06-21 18:00:00",
+                    "endTime": "2017-06-22 06:00:00",
+                    "elementValue": "25"
+                  },
+                  {
+                    "startTime": "2017-06-22 06:00:00",
+                    "endTime": "2017-06-22 18:00:00",
+                    "elementValue": "25"
+                  },
+                  {
+                    "startTime": "2017-06-22 18:00:00",
+                    "endTime": "2017-06-23 06:00:00",
+                    "elementValue": "25"
+                  }
+                ]
+              },
+              {
+                "elementName": "MaxT",
+                "elementMeasure": "C",
+                "time": [
+                  {
+                    "startTime": "2017-06-15 18:00:00",
+                    "endTime": "2017-06-16 06:00:00",
+                    "elementValue": "24"
+                  },
+                  {
+                    "startTime": "2017-06-16 06:00:00",
+                    "endTime": "2017-06-16 18:00:00",
+                    "elementValue": "26"
+                  },
+                  {
+                    "startTime": "2017-06-16 18:00:00",
+                    "endTime": "2017-06-17 06:00:00",
+                    "elementValue": "25"
+                  },
+                  {
+                    "startTime": "2017-06-17 06:00:00",
+                    "endTime": "2017-06-17 18:00:00",
+                    "elementValue": "26"
+                  },
+                  {
+                    "startTime": "2017-06-17 18:00:00",
+                    "endTime": "2017-06-18 06:00:00",
+                    "elementValue": "25"
+                  },
+                  {
+                    "startTime": "2017-06-18 06:00:00",
+                    "endTime": "2017-06-18 18:00:00",
+                    "elementValue": "28"
+                  },
+                  {
+                    "startTime": "2017-06-18 18:00:00",
+                    "endTime": "2017-06-19 06:00:00",
+                    "elementValue": "26"
+                  },
+                  {
+                    "startTime": "2017-06-19 06:00:00",
+                    "endTime": "2017-06-19 18:00:00",
+                    "elementValue": "30"
+                  },
+                  {
+                    "startTime": "2017-06-19 18:00:00",
+                    "endTime": "2017-06-20 06:00:00",
+                    "elementValue": "28"
+                  },
+                  {
+                    "startTime": "2017-06-20 06:00:00",
+                    "endTime": "2017-06-20 18:00:00",
+                    "elementValue": "30"
+                  },
+                  {
+                    "startTime": "2017-06-20 18:00:00",
+                    "endTime": "2017-06-21 06:00:00",
+                    "elementValue": "28"
+                  },
+                  {
+                    "startTime": "2017-06-21 06:00:00",
+                    "endTime": "2017-06-21 18:00:00",
+                    "elementValue": "30"
+                  },
+                  {
+                    "startTime": "2017-06-21 18:00:00",
+                    "endTime": "2017-06-22 06:00:00",
+                    "elementValue": "27"
+                  },
+                  {
+                    "startTime": "2017-06-22 06:00:00",
+                    "endTime": "2017-06-22 18:00:00",
+                    "elementValue": "32"
+                  },
+                  {
+                    "startTime": "2017-06-22 18:00:00",
+                    "endTime": "2017-06-23 06:00:00",
+                    "elementValue": "29"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
