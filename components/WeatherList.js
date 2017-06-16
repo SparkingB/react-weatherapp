@@ -9,6 +9,7 @@ class WeatherList extends React.Component {
         const WeatherItems = weathers.map(
             (weather) => (
                 <WeatherItem
+                    className="list-item"
                     key={weather.wDate}
                     weather={weather}
                 />
@@ -17,7 +18,7 @@ class WeatherList extends React.Component {
 
 
 
-        return (<div>{WeatherItems}</div>)
+        return (<div className="list">{WeatherItems}</div>)
     }
 }
 

@@ -18,10 +18,10 @@ class WeatherTitle extends React.Component {
 
 
         return (
-            <div>
-                <div className="title">{title}</div>
+            <div className="title">
+                <div className="title-text">{title}</div>
                 <select
-                    className="select"
+                    className="title-select"
                     value={title}
                     onChange={this.handleChange}>
                         <option value="臺北市">臺北市</option>

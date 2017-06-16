@@ -11,12 +11,13 @@ class WeatherSideHeader extends React.Component {
 
 
         return (
-            <div>
+            <div className="side-header">
                 <WeatherTitle
                     title={title}
                     onSelect={onSelect}
                 />
                 <WeatherItem
+                    className="header-item"
                     weather={weather}
                 />
             </div>

@@ -3,6 +3,7 @@ const {
     WeatherList
 } = window.App;
 
+<<<<<<< HEAD
 const authToken = 'CWB-352E09AB-03DA-4E13-BB17-83A9CE672D46';
 const getConfig = {
     method: 'GET',
@@ -11,6 +12,19 @@ const getConfig = {
       Authorization: authToken,
     },
   };
+=======
+let ADD = 'http://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?locationName=臺北市&elementName=MinT,MaxT,T,PoP,Wx&sort=time';
+let AAA = {
+    method: 'GET',
+    headers: new Headers({
+        // 'accept': 'application/json',
+        'Authorization': 'CWB-352E09AB-03DA-4E13-BB17-83A9CE672D46',
+        // 'Access-Control-Allow-Origin':''
+    }),
+    mode: 'no-cors',
+    credentials: 'include'
+};
+>>>>>>> first css commit
 
 class WeatherApp extends React.Component {
     constructor(props, context) {
@@ -22,7 +36,27 @@ class WeatherApp extends React.Component {
     }
 
     componentWillMount() {
+<<<<<<< HEAD
         fetch('/@/F-D0047-091?locationName=臺北市&elementName=MinT,MaxT,T,PoP,Wx&sort=time', getConfig)
+=======
+        // let request = new XMLHttpRequest();
+        // request.withCredentials = true;
+        // request.open('GET', ADD, true);
+        // request.setRequestHeader('Authorization', 'CWB-352E09AB-03DA-4E13-BB17-83A9CE672D46');
+        // request.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        // request.setRequestHeader('Access-Control-Allow-Origin', '*');
+    
+
+
+        // request.send();
+        // request.onreadystatechange = function () {
+        //     if (request.readyState == 4 && request.status == 200) {
+        //         console.log(request.responseText);
+        //     }
+        // }
+
+        fetch('../public/weather.json')
+>>>>>>> first css commit
             .then((response) => {
                 return response.json();
             })
@@ -70,7 +104,7 @@ class WeatherApp extends React.Component {
     render() {
 
         return (
-            <div>
+            <div className="container">
                 <WeatherSideHeader
                     title={this.state.searchText}
                     onSelect={(select) => this.setState({ searchText: select })}
