@@ -1,17 +1,18 @@
 /* eslint no-console: 0 */
 const path = require('path');
 const express = require('express');
+const request = require('request');
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+const apiConst = require('./constants');
 
 app.use('/', express.static(__dirname));
-
-// app.get('/data.json', (req, res) => {
-
-//   res.sendFile(path.resolve(__dirname, 'public', 'todos.json'));
-
-// });
+app.use('/@', (req, res) => {
+  const url = `${apiConst.API_ROOT}${req.url}`;
+  console.log(`[proxy request] ${url}...`);
+  req.pipe(request(url))
+    .pipe(res);
+});
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
