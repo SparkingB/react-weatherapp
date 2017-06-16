@@ -3,18 +3,16 @@ const {
     WeatherList
 } = window.App;
 
-let ADD = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?locationName=臺北市&elementName=MinT,MaxT,T,PoP,Wx&sort=time';
-let AAA = {
+const authToken = 'CWB-352E09AB-03DA-4E13-BB17-83A9CE672D46';
+const getConfig = {
     method: 'GET',
-    headers: new Headers({
-        'Authorization': 'CWB-352E09AB-03DA-4E13-BB17-83A9CE672D46',
-        'Access-Control-Allow-Origin':''
-  }),
-    mode: 'no-cors'
-};
+    headers: {
+      'Content-type': 'application/json',
+      Authorization: authToken,
+    },
+  };
 
 class WeatherApp extends React.Component {
-
     constructor(props, context) {
         super(props, context);
         this.state = {
@@ -24,9 +22,8 @@ class WeatherApp extends React.Component {
     }
 
     componentWillMount() {
-        fetch(ADD,AAA)
+        fetch('/@/F-D0047-091?locationName=臺北市&elementName=MinT,MaxT,T,PoP,Wx&sort=time', getConfig)
             .then((response) => {
-                console.log(response);
                 return response.json();
             })
             .then((responseObj) => {//移位置
