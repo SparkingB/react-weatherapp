@@ -21,6 +21,7 @@ class WeatherApp extends React.Component {
         this.state = {
             weathers: [],
             searchText: "新北市",
+            loadingClassName: "hidden",
             test: []
         };
 
@@ -40,9 +41,10 @@ class WeatherApp extends React.Component {
             .then((response) => {
                 return response.json();
             })
-            .then((response)=>(setTimeout(this.dealFetchResponse(response),2000)));/////~~~~~~~
-            
+            .then((response)=>(setTimeout(() => this.dealFetchResponse(response),500)));
             // .then(this.dealFetchResponse);
+            
+            
     }
 
 
@@ -86,7 +88,7 @@ class WeatherApp extends React.Component {
 
             })
 
-        this.setState({ weathers: weathers, test: weatherElementObjAry })
+        this.setState({ weathers: weathers, loadingClassName: "hidden", test: weatherElementObjAry })
     }
 
 
@@ -98,13 +100,14 @@ class WeatherApp extends React.Component {
                     title={this.state.searchText}
                     onSelect={
                         (select) => {
-                            this.setState({ searchText: select })
+                            this.setState({ searchText: select, loadingClassName: "visible" })
                             this.fetchRequest(select);
                         }
                     }
                 />
                 <WeatherDataView
                     weathers={this.state.weathers}
+                    loadingClassName={this.state.loadingClassName}
                 />
             </div>
         )

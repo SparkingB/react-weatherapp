@@ -1,6 +1,7 @@
 const {
     WeatherPolyline,
-    WeatherList
+    WeatherList,
+    Loading
 } = window.App;
 
 class WeatherDataView extends React.Component {
@@ -11,10 +12,12 @@ class WeatherDataView extends React.Component {
     }
 
     renderData() {
-        const { weathers } = this.props;
+        const { weathers, loadingClassName } = this.props;
         return (
             <div>
-                <img src="../assets/loading.png" alt="loading" className="loading"/>
+                <Loading 
+                    loadingClassName={loadingClassName}
+                />
                 <WeatherPolyline
                     weathers={weathers}
                 />
@@ -28,7 +31,7 @@ class WeatherDataView extends React.Component {
 
     renderLoading() {
         return (
-            <div>Loading</div>
+            <Loading />
         );
     }
 }

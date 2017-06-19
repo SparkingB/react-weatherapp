@@ -1,0 +1,28 @@
+.loading {
+    position: absolute;
+    width: 400px;
+    height: 610px;
+    z-index: 100;
+
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 10px 10px;
+
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.loading>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 100px;
+    height: 100px;
+}
+
+.loading-hidden {
+    opacity: 0;
+    visibility: hidden;
+}

@@ -18,6 +18,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+
 app.listen(PORT, 'localhost', (err) => {
   if (err) {
     console.log(err);
