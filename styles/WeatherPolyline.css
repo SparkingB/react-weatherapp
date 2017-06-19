@@ -1,0 +1,18 @@
+svg {
+    width: 400px;
+    height: 210px;
+    fill: white
+}
+
+polyline {
+    fill: none;
+    stroke: white;
+}
+
+.svgDate {
+    font-size: 10px;
+}
+
+.loading {
+    position: absolute;
+}

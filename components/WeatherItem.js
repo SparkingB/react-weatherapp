@@ -4,16 +4,7 @@ class WeatherItem extends React.Component {
 
     render() {
         const { weather } = this.props;
-        return weather ? this.renderObject() : this.renderNone();//??
-    }
-
-    renderNone() {
-        return (<div></div>);
-    }
-
-    renderObject() {
-        const { weather } = this.props;
-        const imgUrl = 'http://www.cwb.gov.tw/V7/symbol/weather/gif/day/'+weather.Wx+'.gif';
+        const imgUrl = 'http://www.cwb.gov.tw/V7/symbol/weather/gif/day/' + weather.Wx + '.gif';
         return (
             <div className="list-item">
                 <span className="date">{weather.wDate} </span>

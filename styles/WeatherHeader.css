@@ -1,0 +1,33 @@
+.header {
+    height: 60px;
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+    font-size: 35px;
+    font-weight: 200;
+}
+
+.header-select {
+    top: 28px;
+    left: 257px;
+
+    width: 0;
+    height: 0;
+
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    background: none;
+    border: none;
+    
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid white;
+    /*outline: none;*/
+}

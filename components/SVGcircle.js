@@ -8,7 +8,7 @@ class SVGcircle extends React.Component {
             <g>
                 <text x={textX} y={-textY} >{temperature}°C</text>
                 <circle cx={circleX} cy={-circleY} r="3"></circle>
-                <text x={textX-5} y="-10" className="svgDate">{date}</text>
+                <text x={textX - 5} y="-10" className="svgDate">{date}</text>
             </g>
         );
     }

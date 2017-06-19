@@ -1,7 +1,8 @@
 const {
-    WeatherSideHeader,
-    WeatherList
+    WeatherHeader,
+    WeatherDataView
 } = window.App;
+
 
 const authToken = 'CWB-352E09AB-03DA-4E13-BB17-83A9CE672D46';
 const getConfig = {
@@ -12,9 +13,11 @@ const getConfig = {
     },
 };
 
+
 class WeatherApp extends React.Component {
     constructor(props, context) {
         super(props, context);
+
         this.state = {
             weathers: [],
             searchText: "新北市",
@@ -23,27 +26,27 @@ class WeatherApp extends React.Component {
 
         this.dealFetchResponse = this.dealFetchResponse.bind(this);
         this.fetchRequest = this.fetchRequest.bind(this);
-
     }
+
 
     componentWillMount() {
         this.fetchRequest();
     }
 
 
-
-    fetchRequest(select=this.state.searchText) {
+    fetchRequest(select = this.state.searchText) {
         const requestUrl = '/@/F-D0047-091?locationName=' + select + '&elementName=MinT,MaxT,T,PoP,Wx&sort=time';
         fetch(requestUrl, getConfig)
             .then((response) => {
                 return response.json();
             })
-            .then((response)=>(setTimeout(this.dealFetchResponse(response),10000)));
+            .then((response)=>(setTimeout(this.dealFetchResponse(response),2000)));/////~~~~~~~
+            
+            // .then(this.dealFetchResponse);
     }
 
 
     dealFetchResponse(responseObj) {
-
         const weatherElementObjAry = responseObj.records.locations[0].location[0].weatherElement;
 
         const weathers = [{}, {}, {}, {}, {}, {}, {}];
@@ -64,7 +67,7 @@ class WeatherApp extends React.Component {
                     case 'MaxT':
                         weatherElementDay.map((wed, idx) => {
                             weathers[idx].MaxT = wed.elementValue;
-                            weathers[idx].wDate = wed.startTime.slice(5, 10).replace('-','/');
+                            weathers[idx].wDate = wed.startTime.slice(5, 10).replace('-', '/');
                         })
                         break;
                     case 'T':
@@ -83,20 +86,15 @@ class WeatherApp extends React.Component {
 
             })
 
-        // const PoP = weatherElementObjAry.filter((weathersElement) => (weathersElement.elementName === 'PoP'))[0];
-        // weathers[0].PoP = PoP.time[0].elementValue
-
         this.setState({ weathers: weathers, test: weatherElementObjAry })
-
     }
 
-    
 
     render() {
 
         return (
             <div className="container">
-                <WeatherSideHeader
+                <WeatherHeader
                     title={this.state.searchText}
                     onSelect={
                         (select) => {
@@ -104,9 +102,8 @@ class WeatherApp extends React.Component {
                             this.fetchRequest(select);
                         }
                     }
-                    weathers={this.state.weathers}
                 />
-                <WeatherList
+                <WeatherDataView
                     weathers={this.state.weathers}
                 />
             </div>
