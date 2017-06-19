@@ -9,7 +9,7 @@ const apiConst = require('./constants');
 app.use('/', express.static(__dirname));
 app.use('/@', (req, res) => {
   const url = `${apiConst.API_ROOT}${req.url}`;
-  console.log(`[proxy request] ${url}...`);
+  console.log(`[proxy request] ${url}`);
   req.pipe(request(url))
     .pipe(res);
 });

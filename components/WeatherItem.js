@@ -4,7 +4,7 @@ class WeatherItem extends React.Component {
 
     render() {
         const { weather } = this.props;
-        return weather ? this.renderObject() : this.renderNone();
+        return weather ? this.renderObject() : this.renderNone();//??
     }
 
     renderNone() {
@@ -12,14 +12,14 @@ class WeatherItem extends React.Component {
     }
 
     renderObject() {
-        const { weather, className } = this.props;
+        const { weather } = this.props;
         const imgUrl = 'http://www.cwb.gov.tw/V7/symbol/weather/gif/day/'+weather.Wx+'.gif';
         return (
-            <div className={className}>
+            <div className="list-item">
                 <span className="date">{weather.wDate} </span>
                 <img className="weather-pic" src={imgUrl} alt="pic" />
-                <span className="temperature">{weather.T} </span>
-                <span className="pop">{weather.PoP} </span>
+                {/* <span className="temperature">{weather.T} </span> */}
+                <span className="pop">{weather.PoP.length !== 0 ? weather.PoP : '-'} </span>
                 <span className="min-temperature">{weather.MinT} </span>
                 <span className="max-temperature">{weather.MaxT} </span>
             </div>
@@ -28,8 +28,7 @@ class WeatherItem extends React.Component {
 }
 
 WeatherItem.propTypes = {
-    weather: React.PropTypes.object,
-    className: React.PropTypes.string
+    weather: React.PropTypes.arrayOf(React.PropTypes.object.isRequired)
 }
 
 window.App.WeatherItem = WeatherItem;

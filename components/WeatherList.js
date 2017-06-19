@@ -9,7 +9,6 @@ class WeatherList extends React.Component {
         const WeatherItems = weathers.map(
             (weather) => (
                 <WeatherItem
-                    className="list-item"
                     key={weather.wDate}
                     weather={weather}
                 />
@@ -23,7 +22,7 @@ class WeatherList extends React.Component {
 }
 
 WeatherItem.propTypes = {
-    weathers: React.PropTypes.arrayOf(React.PropTypes.object)
+    weathers: React.PropTypes.arrayOf(React.PropTypes.object.isRequired)
 }
 
 window.App.WeatherList = WeatherList;

@@ -59,7 +59,7 @@ class WeatherTitle extends React.Component {
 
 WeatherTitle.propTypes = {
     title: React.PropTypes.string.isRequired,
-    onSelect: React.PropTypes.func
+    onSelect: React.PropTypes.func.isRequired
 };
 
 window.App.WeatherTitle = WeatherTitle;
