@@ -13,7 +13,7 @@ class WeatherPolyline extends React.Component {
         const temperature = weathers.map((w, idx) => { position[idx].t = Number(w.T); position[idx].date = w.wDate; return position[idx].t });
         const temperatureMin = Math.min(...temperature);
         const temperatureDis = Math.max(...temperature) - temperatureMin;
-        const mulFix = 130.0 / temperatureDis;
+        const mulFix = temperatureDis !== 0 ? 130.0 / temperatureDis : 1 ;
         position.map((pos) => (pos.cy = (pos.t - temperatureMin) * mulFix + 35));
 
         const polylinePoint = position.reduce((first, second) => (first + ' ' + second.x + ',' + -second.cy), '');

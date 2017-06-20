@@ -20,7 +20,6 @@ class WeatherApp extends React.Component {
 
         this.state = {
             weathers: [],
-            searchText: "新北市",
             loadingClassName: "hidden",
             test: []
         };
@@ -35,7 +34,8 @@ class WeatherApp extends React.Component {
     }
 
 
-    fetchRequest(select = this.state.searchText) {
+    fetchRequest(select = '新北市') {
+        console.log(select);
         const requestUrl = '/@/F-D0047-091?locationName=' + select + '&elementName=MinT,MaxT,T,PoP,Wx&sort=time';
         fetch(requestUrl, getConfig)
             .then((response) => {
@@ -97,10 +97,9 @@ class WeatherApp extends React.Component {
         return (
             <div className="container">
                 <WeatherHeader
-                    title={this.state.searchText}
                     onSelect={
                         (select) => {
-                            this.setState({ searchText: select, loadingClassName: "visible" })
+                            this.setState({ loadingClassName: "visible" })
                             this.fetchRequest(select);
                         }
                     }

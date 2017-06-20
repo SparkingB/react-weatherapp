@@ -3,16 +3,32 @@ const {
 } = window.App;
 
 class WeatherHeader extends React.Component {
-    render() {
 
-        const { title, onSelect } = this.props;
+    constructor(props, context) {
+        super(props, context);
+
+        this.state = {
+            title: "新北市",
+        };
+
+        this.handleSelect = this.handleSelect.bind(this);
+    }
+
+    handleSelect(e) {
+        const { onSelect } = this.props;
+        this.setState({ title: e });
+        onSelect && onSelect(e);
+    }
+
+
+    render() {
 
         return (
             <div className="header">
-                <div className="header-title">{title}</div>
+                <div className="header-title">{this.state.title}</div>
                 <WeatherSelect
-                    title={title}
-                    onSelect={onSelect}
+                    title={this.state.title}
+                    onSelect={this.handleSelect}
                 />
             </div>
         )
@@ -20,8 +36,7 @@ class WeatherHeader extends React.Component {
 }
 
 WeatherHeader.propTypes = {
-    title: React.PropTypes.string.isRequired,
-    onSelect: React.PropTypes.func.isRequired,
+    onSelect: React.PropTypes.func.isRequired
 }
 
 
