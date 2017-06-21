@@ -6,6 +6,10 @@ const _initState = () => ({
     test: []
 })
 
+const _errorState = () => ({
+    weathers: "error"
+})
+
 const _dealFetchResponse = (responseObj) => {
     const weatherElementObjAry = responseObj.records.locations[0].location[0].weatherElement;
 
@@ -53,7 +57,10 @@ window.App.reducers.weathers = (state = _initState(), action) => {
     switch (action.type) {
         case ActionTypes.LOAD_WEATHER_SUCCESS:
             console.log("LOAD_WEATHER_SUCCESS");
-            return _dealFetchResponse(action.response);
+            return _dealFetchResponse(action.json);
+        case ActionTypes.LOAD_WEATHER_FAIL:
+            console.log("LOAD_WEATHER_FAIL");
+            return _errorState();
         default:
             return state;
     }

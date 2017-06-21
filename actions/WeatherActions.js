@@ -24,43 +24,44 @@ window.App.WeatherActions = {
 
             const requestUrl = '/@/F-D0047-091?locationName=' + select + '&elementName=MinT,MaxT,T,PoP,Wx&sort=time';
 
-            var delay = function (s) {
-                return new Promise(function (resolve, reject) {
-                    setTimeout(resolve, s);
-                });
-            };
 
             fetch(requestUrl, getConfig)
                 .then((response) => {
                     console.log("fetch1");
-                    return response.json();
+                    console.log(response);
+                    return response.ok ? response.json() : Promise.reject(response.status);
                 })
-                .then((response) => {
+                .then(json => {
                     console.log("fetch2");
-                    return Promise.resolve(() => dispatch({
-                        type: ActionTypes.LOAD_WEATHER_SUCCESS,
-                        response: response
-                    }))
+                    return () =>
+                        dispatch({
+                            type: ActionTypes.LOAD_WEATHER_SUCCESS,
+                            json,
+                        })
+
                 })
-                .then((updateData) => {
-                    // const updateLoading = () => {
-                    console.log("fetch3");
-                    dispatch({
-                        type: ActionTypes.TOGGLE_LOADING_PAGE
-                    })
+                .then(
+                    (updateData) => {
+                        console.log("fetch3");
+                        const toggleLoadingPage = () => dispatch({
+                            type: ActionTypes.TOGGLE_LOADING_PAGE
+                        })
 
-                    // }
-                    // setTimeout(updateLoading, 500);
-                    // setTimeout(updateDate, 500);
-
-
-                });
+                        setTimeout(() => {
+                            toggleLoadingPage();
+                            updateData();
+                        }, 500);
+                    },
+                    (errlog) => {
+                        console.log(errlog);
+                        dispatch({
+                            type: ActionTypes.TOGGLE_LOADING_PAGE
+                        })
+                        dispatch({
+                            type: ActionTypes.LOAD_WEATHER_FAIL,
+                        })
+                    }
+                );
         };
     },
-
-    toggleLoadingPage() {//???
-        return {
-            type: ActionTypes.TOGGLE_LOADING_PAGE
-        };
-    }
 };
