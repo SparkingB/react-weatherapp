@@ -28,6 +28,7 @@
 
 .list-item:hover {
     transform: translateY(-1px);
+    border-left: solid 10px #bbb;
 }
 
 .list-item:first-child::before {

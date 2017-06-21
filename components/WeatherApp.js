@@ -21,7 +21,7 @@ class WeatherApp extends React.Component {
             loadWeather
          } = this.props;
 
-        console.log('before WeatherApp render',weathers);
+        console.log('before WeatherApp render, weathers : ',weathers,'\n===');
         return (
             <div className="container">
                 <WeatherHeader
